@@ -14,9 +14,54 @@
 步骤
 1. 新建文件`test1.txt`和`test2.txt`加入仓库
 2. 使用`git rm`删除`test1.txt`；使用`rm`删除`test2.txt`
-3. 确认`git status`和`git log`信息
+3. 确认`git status`信息
+   
+`git status`提示信息如下：
+```bash
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   readme.md
+        deleted:    test1.txt
 
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    text2.txt
+```
+
+4. 使用`git add -A`将全部修改加入暂存
+5. 确认`git status`信息
+
+`git status`提示信息如下：
+```bash
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   readme.md
+        deleted:    test1.txt
+        deleted:    text2.txt
+```
+
+6. 执行`git commit`提交更改
+7. 确认`git log`信息
+
+`git log`提示信息如下：
+```bash
+Author: XXX <xxx@xxx.net>
+Date:   Sun Dec 8 16:26:09 2019 +0800
+
+    删除test1.txt和test2.txt
+```
+
+总结：根据实验可以得出，在执行`git rm`命令后会同时删除文件和保存在暂存区中的数据，而直接删除则需要手动执行一次`git add`将删除操作保存到暂存区。
+在业务操作中要细分步骤，不管是否使用`git rm`命令，在删除文件后都需要进行提交留下操作记录，便于日后的维护/回退。
 
 # 忽略文件
 一般我们总会有些文件无需纳入 Git 的管理，也不希望它们总出现在未跟踪文件列表。 通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。 在这种情况下，我们可以创建一个名为`.gitignore`的文件，列出要忽略的文件模式。 来看一个实际的例子：
