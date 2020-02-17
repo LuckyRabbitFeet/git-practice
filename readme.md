@@ -1,18 +1,23 @@
 # 命令
 
-| 命令         | 作用                      |
-| ------------ | ------------------------- |
-| git config   | 修改 git 配置信息         |
-| git init     | 在当前目录初始化 git 仓库 |
-| git clone    | 克隆现有的仓库            |
-| git add      | 把文件加入暂存进行跟踪    |
-| git commit   | 提交更新                  |
-| git status   | 检查当前文件状态          |
-| git rm       | 移除文件                  |
-| git mv       | 移动文件                  |
-| git branch   | 创建分支                  |
-| git checkout | 切换分支                  |
-| git merge    | 合并分支                  |
+| 命令                                          | 作用                           |
+| --------------------------------------------- | ------------------------------ |
+| git config                                    | 修改 git 配置信息              |
+| git init                                      | 在当前目录初始化 git 仓库      |
+| git clone                                     | 克隆现有的仓库                 |
+| git add                                       | 把文件加入暂存进行跟踪         |
+| git commit                                    | 提交更新                       |
+| git status                                    | 检查当前文件状态               |
+| git rm                                        | 移除文件                       |
+| git mv                                        | 移动文件                       |
+| git branch                                    | 创建分支                       |
+| git checkout                                  | 切换分支                       |
+| git merge                                     | 合并分支                       |
+| git push (remote) (branch)                    | 推送远程分支                   |
+| git checkout -b [branch][remotename]/[branch] | 跟踪远程分支                   |
+| git branch -u [remotename]/[branch]           | 设置已有的本地分支跟踪远程分支 |
+| git branch -vv                                | 查看所有跟踪分支               |
+| git push origin --delete [branch]             | 删除远程分支                   |
 
 ## 使用 git rm 和直接删除文件的区别
 
