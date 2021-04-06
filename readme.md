@@ -19,6 +19,8 @@
 | git branch -vv                                | 查看所有跟踪分支               |
 | git push origin --delete [branch]             | 删除远程分支                   |
 | git log --oneline --decorate --graph --all | 查看提交日志 |
+| git fetch | 拉取远程仓库 |
+| git rebase | 变基，作用：可以把当前节点作为新节点，简化提交日志 |
 
 ## 使用 git rm 和直接删除文件的区别
 
