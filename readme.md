@@ -13,6 +13,7 @@
 | git branch                                    | 创建分支                       |
 | git checkout                                  | 切换分支                       |
 | git merge                                     | 合并分支                       |
+| git rebase | 合并分支，变基，作用：可以把当前节点作为新节点，简化提交日志 |
 | git push (remote) (branch)                    | 推送远程分支                   |
 | git checkout -b [branch][remotename]/[branch] | 跟踪远程分支                   |
 | git branch -u [remotename]/[branch]           | 设置已有的本地分支跟踪远程分支 |
@@ -20,7 +21,6 @@
 | git push origin --delete [branch]             | 删除远程分支                   |
 | git log --oneline --decorate --graph --all | 查看提交日志 |
 | git fetch | 拉取远程仓库 |
-| git rebase | 合并分支，变基，作用：可以把当前节点作为新节点，简化提交日志 |
 
 ## 使用 git rm 和直接删除文件的区别
 
@@ -118,4 +118,18 @@ $ cat .gitignore
 相关文档：
 [4.3 服务器上的 Git - 生成 SSH 公钥](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5)
 [7.14 Git 工具 - 凭证存储](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8#_credential_caching)
+
+# fetch 和 pull 的区别
+
+![git](./git.jpg)
+
+如图，fetch 在拉取后不会合并，pull 在拉取后会进行合并
+
+# 关于 merge 和 rebase 的合并
+
+看这些文章
+
+[git merge和git rebase的区别, 切记：永远用rebase](https://medium.com/@neatcoding/git-merge%E5%92%8Cgit-rebase%E7%9A%84%E5%8C%BA%E5%88%AB-%E5%88%87%E8%AE%B0-%E6%B0%B8%E8%BF%9C%E7%94%A8rebase-7424eaf57dbc)
+[git rebase 和 git merge 的区别](https://www.jianshu.com/p/f23f72251abc)
+[git中merge和rebase的区别](https://gist.github.com/68681395/9d2789f38fb62e60b9fa0d0c4a7d4511)
 
