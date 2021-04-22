@@ -11,13 +11,13 @@
 | git rm                                        | 移除文件                       |
 | git mv                                        | 移动文件                       |
 | git branch                                    | 创建分支                       |
+| git branch -u [remotename]/[branch]           | 设置已有的本地分支跟踪远程分支 |
+| git branch -vv                                | 查看所有跟踪分支               |
 | git checkout                                  | 切换分支                       |
+| git checkout -b [branch][remotename]/[branch] | 跟踪远程分支                   |
 | git merge                                     | 合并分支                       |
 | git rebase | 合并分支，变基，作用：可以把当前节点作为新节点，简化提交日志 |
 | git push (remote) (branch)                    | 推送远程分支                   |
-| git checkout -b [branch][remotename]/[branch] | 跟踪远程分支                   |
-| git branch -u [remotename]/[branch]           | 设置已有的本地分支跟踪远程分支 |
-| git branch -vv                                | 查看所有跟踪分支               |
 | git push origin --delete [branch]             | 删除远程分支                   |
 | git log --oneline --decorate --graph --all | 查看提交日志 |
 | git fetch | 拉取远程仓库 |
