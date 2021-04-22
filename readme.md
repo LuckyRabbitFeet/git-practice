@@ -21,6 +21,7 @@
 | git push origin --delete [branch]             | 删除远程分支                   |
 | git log --oneline --decorate --graph --all | 查看提交日志 |
 | git fetch | 拉取远程仓库 |
+| git rebase -i HEAD~3 | 展示最近 3 次修改，可以修改提交信息，也可以用来合并commit |
 
 ## 使用 git rm 和直接删除文件的区别
 
